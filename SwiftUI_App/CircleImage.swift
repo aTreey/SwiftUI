@@ -10,9 +10,7 @@ import SwiftUI
 
 struct CircleImage : View {
     var body: some View {
-//        Text("Hello SwiftUI Image!")
-        Image("gugong")
-            .aspectRatio(CGSize(width: 300, height: 300), contentMode: .fill)
+        Image("turtlerock")
             // 将图像剪成圆形
             .clipShape(Circle())
             // 创建边框
@@ -21,15 +19,13 @@ struct CircleImage : View {
             )
             // 添加阴影
             .shadow(radius: 10)
-            .imageScale(Image.Scale.small)
-            .frame(width: 100, height: 100, alignment: .center)
     }
 }
 
-//#if DEBUG
+#if DEBUG
 struct CircleImage_Previews : PreviewProvider {
     static var previews: some View {
         CircleImage()
     }
 }
-//#endif
+#endif
