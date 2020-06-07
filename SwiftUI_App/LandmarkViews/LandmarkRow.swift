@@ -20,7 +20,10 @@ struct LandmarkRow: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 50, height: 50)
-            Text(landmark.name)
+            Text(landmark.name).padding(0)
+            // 设置各个边距
+//            Text(landmark.name).padding(EdgeInsets(top: 15, leading: 5, bottom: 15, trailing: 20))
+//            Text(landmark.name).padding(.leading, 10)
             Spacer()
         }
 //        .padding(15)

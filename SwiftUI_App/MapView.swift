@@ -10,6 +10,8 @@ import SwiftUI
 import MapKit
 
 struct MapView : UIViewRepresentable {
+    // 地标坐标
+    var coordinate: CLLocationCoordinate2D
     
     typealias UIViewType = MKMapView
     // 创建mapView
@@ -19,7 +21,6 @@ struct MapView : UIViewRepresentable {
     
     // 配置view 响应事件，给 map view 设置坐标，
     func updateUIView(_ uiView: MapView.UIViewType, context: UIViewRepresentableContext<MapView>) {
-        let coordinate = CLLocationCoordinate2D(latitude: 34.011286, longitude: -116.166868)
         // 地图的宽和高
         let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
         let region = MKCoordinateRegion(center: coordinate, span: span)
@@ -31,7 +32,7 @@ struct MapView : UIViewRepresentable {
 #if DEBUG
 struct MapView_Previews : PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(coordinate: landmarkData[0].locationCoordinate)
     }
 }
 #endif
