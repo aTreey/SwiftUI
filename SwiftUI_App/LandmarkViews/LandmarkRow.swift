@@ -23,7 +23,7 @@ struct LandmarkRow: View {
             Text(landmark.name)
             Spacer()
         }
-        .padding(15)
+//        .padding(15)
     }
 }
 
