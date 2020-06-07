@@ -11,8 +11,10 @@ import CoreLocation
 
 
 /// Landmark 结构体，用来存储 app 需要显示的所有地标数据，并从 landmarkData.json 导入一组地标数据。
-struct Landmark: Hashable, Codable {
+struct Landmark: Hashable, Codable, Identifiable {
+    // 遵循 Identifiable 协议需要声明一个唯一标示
     var id: Int
+    
     var name: String
     var state: String
     var park: String
