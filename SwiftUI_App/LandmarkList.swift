@@ -46,6 +46,13 @@ struct LandmarkList: View {
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkList()
+        // 添加预览设备
+//        LandmarkList().previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
+            LandmarkList()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                // 展示设备名称
+            .previewDisplayName(deviceName)
+        }
     }
 }
