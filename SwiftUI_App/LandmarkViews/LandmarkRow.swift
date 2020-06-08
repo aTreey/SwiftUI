@@ -25,6 +25,12 @@ struct LandmarkRow: View {
 //            Text(landmark.name).padding(EdgeInsets(top: 15, leading: 5, bottom: 15, trailing: 20))
 //            Text(landmark.name).padding(.leading, 10)
             Spacer()
+            
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+                    .imageScale(.medium)
+                    .foregroundColor(.yellow)
+            }
         }
 //        .padding(15)
     }

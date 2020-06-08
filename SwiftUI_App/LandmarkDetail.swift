@@ -21,7 +21,7 @@ struct LandmarkDetail : View {
                 .frame(height: 300)
             
             // 图片
-            CircleImage(image: Image("turtlerock"))
+            CircleImage(image: landmark.image)
                 .offset(x: 0, y: -130)// 设置偏移
                 .padding(.bottom, -130)
             
