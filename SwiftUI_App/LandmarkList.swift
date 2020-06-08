@@ -12,6 +12,9 @@ import SwiftUI
 /// 地标列表
 struct LandmarkList: View {
     
+    // state 是一个值或一组值，它可以随时间变化，并且会影响视图的行为、内容或布局
+    @State var showFavoritesOnly = false
+    
     var body: some View {
         // 1. 静态cell
         // List{

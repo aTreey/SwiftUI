@@ -14,20 +14,18 @@ import CoreLocation
 struct Landmark: Hashable, Codable, Identifiable {
     // 遵循 Identifiable 协议需要声明一个唯一标示
     var id: Int
-    
     var name: String
     var state: String
     var park: String
     var category: Category
+    var isFavorite: Bool
+    fileprivate var imageName: String
+    fileprivate var coordinates: Coordinates
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
             longitude: coordinates.longitude)
     }
-    
-    fileprivate var imageName: String
-    fileprivate var coordinates: Coordinates
-    
     
     // 字符串类型枚举，
     
@@ -40,6 +38,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         case featured = "Featured"
         case lakes = "Lakes"
         case rivers = "Rivers"
+        case mountains = "Mountains"
     }
 }
 
