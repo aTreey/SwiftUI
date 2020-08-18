@@ -10,7 +10,21 @@ import SwiftUI
 
 struct LandmarkDetail : View {
     
+    // 使用UserData 对象
+    @EnvironmentObject var userData: UserData
+    
+    //
     var landmark: Landmark
+    
+    // 使用 landmarkIndex 访问或更新 landmark 的收藏状态，确保数据的正确性
+    var landmarkIndex: Int {
+        // 从集合中找到第一个landmark的索引
+        userData.landmarks.firstIndex(where: {$0.id == landmark.id})!
+    }
+    
+    var isFavorite: Bool {
+        self.userData.landmarks[self.landmarkIndex].isFavorite
+    }
     
     var body: some View {
         VStack {
@@ -27,8 +41,21 @@ struct LandmarkDetail : View {
             
             // 设置对齐方法
             VStack(alignment: .leading, spacing: 10) {
-                Text(landmark.name)
+                HStack {
+                    Text(landmark.name)
                     .font(.title)
+                    
+                    Button(action: {
+                        self.userData.landmarks[self.landmarkIndex].isFavorite.toggle()
+                    }) {
+                        if isFavorite {
+                            Image(systemName: "star.fill").foregroundColor(Color.yellow)
+                        } else {
+                            Image(systemName: "star").foregroundColor(Color.gray)
+                        }
+                    }
+                }
+                
                 HStack(alignment: .top) {
                     Text(landmark.state)
                     .font(.subheadline)
