@@ -22,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
+            
+            // 给 LandmarkList 添加 environmentObject(_:) 修饰符。
             window.rootViewController = UIHostingController(rootView: LandmarkList().environmentObject(UserData()))
             self.window = window
             window.makeKeyAndVisible()
