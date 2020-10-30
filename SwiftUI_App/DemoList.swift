@@ -17,11 +17,12 @@ struct DemoList: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 15) {
+            VStack(alignment: .leading, spacing: 40) {
                 TestStack(title:"封装标题", subTitle:"封装副标题", spacing: 15)
                 Text("测试")
                     .font(.title)
-                Text("测试122")
+                    .foregroundColor(Color.red)
+                Text("测试122232")
                     .font(.subheadline)
                 
                 if !isShow {
@@ -31,7 +32,7 @@ struct DemoList: View {
                 }
                 
 //                  let 语句无法通过 function builder 创建合适的输出
-//                let show = isShow
+//                let show = self.isShow
 //                if show {
 //                    Text("逻辑判断")
 //                        .font(.subheadline)
@@ -41,7 +42,7 @@ struct DemoList: View {
                 Image("turtlerock")
                     .clipShape(Circle())
                 .shadow(radius: 10)
-            }
+                }
             .navigationBarHidden(false)
             .navigationBarTitle(Text("Swift UI Demo"))
         }
