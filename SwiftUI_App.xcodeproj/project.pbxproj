@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731BB304254A8666002EFD74 /* LevelBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731BB303254A8666002EFD74 /* LevelBadge.swift */; };
+		731BB311254A87DF002EFD74 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731BB310254A87DF002EFD74 /* Post.swift */; };
 		737AF20624F4E3C300C28F6A /* DomoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AF20524F4E3C300C28F6A /* DomoListRow.swift */; };
 		7393F30C24F51508001001B9 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393F30B24F51508001001B9 /* Badge.swift */; };
 		7393F30E24F51644001001B9 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393F30D24F51644001001B9 /* HexagonParameters.swift */; };
@@ -118,6 +120,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		731BB303254A8666002EFD74 /* LevelBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelBadge.swift; sourceTree = "<group>"; };
+		731BB310254A87DF002EFD74 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		731BB31F254A9B46002EFD74 /* postListData_recommend.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = postListData_recommend.json; sourceTree = "<group>"; };
 		737AF20524F4E3C300C28F6A /* DomoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomoListRow.swift; sourceTree = "<group>"; };
 		7393F30B24F51508001001B9 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		7393F30D24F51644001001B9 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
@@ -213,6 +218,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731BB302254A8615002EFD74 /* CommonWidget */ = {
+			isa = PBXGroup;
+			children = (
+				731BB303254A8666002EFD74 /* LevelBadge.swift */,
+			);
+			path = CommonWidget;
+			sourceTree = "<group>";
+		};
+		731BB30F254A87C7002EFD74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				731BB310254A87DF002EFD74 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		731BB31C254A99CA002EFD74 /* jsonData */ = {
+			isa = PBXGroup;
+			children = (
+				731BB31F254A9B46002EFD74 /* postListData_recommend.json */,
+				73B3837A2459498F00C7AAD5 /* landmarkData.json */,
+			);
+			path = jsonData;
+			sourceTree = "<group>";
+		};
 		7393F30A24F514DA001001B9 /* Demo2Drawing Paths and Shapes  */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +270,8 @@
 		7393F31024F8DE8B001001B9 /* FeedList */ = {
 			isa = PBXGroup;
 			children = (
+				731BB30F254A87C7002EFD74 /* Model */,
+				731BB302254A8615002EFD74 /* CommonWidget */,
 				7393F31124F8DEE3001001B9 /* PostCell.swift */,
 			);
 			path = FeedList;
@@ -305,6 +337,7 @@
 		73B383722459498F00C7AAD5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				731BB31C254A99CA002EFD74 /* jsonData */,
 				73B383732459498F00C7AAD5 /* turtlerock.jpg */,
 				73B383742459498F00C7AAD5 /* silversalmoncreek.jpg */,
 				73B383752459498F00C7AAD5 /* icybay.jpg */,
@@ -312,7 +345,6 @@
 				73B383772459498F00C7AAD5 /* hiddenlake.jpg */,
 				73B383782459498F00C7AAD5 /* twinlake.jpg */,
 				73B383792459498F00C7AAD5 /* umbagog.jpg */,
-				73B3837A2459498F00C7AAD5 /* landmarkData.json */,
 				73B3837B2459498F00C7AAD5 /* chincoteague.jpg */,
 				73B3837C2459498F00C7AAD5 /* charleyrivers.jpg */,
 				73B3837D2459498F00C7AAD5 /* stmarylake.jpg */,
@@ -507,7 +539,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "于鸿鹏";
 				TargetAttributes = {
 					73AB70572512F2B4003D69B5 = {
@@ -635,6 +667,7 @@
 				73A4E4D52511DCD70075D32A /* TextFieldDemo.swift in Sources */,
 				73D541C322DCBEDE001936B3 /* CircleImage.swift in Sources */,
 				73A04E4222F92B9600A00416 /* MapView.swift in Sources */,
+				731BB311254A87DF002EFD74 /* Post.swift in Sources */,
 				73FAA6BF22D8E6FC0053BCC8 /* SceneDelegate.swift in Sources */,
 				73AB70882512F96A003D69B5 /* DatePickerDemo.swift in Sources */,
 				73B7D770245AC043005E3DC4 /* LandmarkList.swift in Sources */,
@@ -648,6 +681,7 @@
 				73B38393245983DA00C7AAD5 /* Data.swift in Sources */,
 				7393F31224F8DEE3001001B9 /* PostCell.swift in Sources */,
 				73AB70552512EADD003D69B5 /* WebImageDemo.swift in Sources */,
+				731BB304254A8666002EFD74 /* LevelBadge.swift in Sources */,
 				73AB708B25132001003D69B5 /* ButtonDemo2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

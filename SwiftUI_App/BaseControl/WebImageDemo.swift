@@ -28,11 +28,12 @@ struct WebImageDemo: View {
     
     func downloadWebImage() {
         guard let url = URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600314682613&di=5c55c0ebe9fb26312de6a5ad20fe5962&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201105%2F17%2F113554rnu40q7nbgnn3lgq.jpg") else {
-            print("无效的图片链接")
+            print("无效的图片")
             return
         }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
             if let data = data, let image = UIImage(data: data) {
                 self.uiImage = image
             } else {
