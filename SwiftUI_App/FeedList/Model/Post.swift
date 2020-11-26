@@ -8,61 +8,34 @@
 
 import SwiftUI
 
-struct PostList: Codable {
-    var data: [Post]
-}
-
-
-// MARK: - Result
+// MARK: - PostList
 
 /// 遵守Codable协议，可编码/解码，可以 json <-> struct 互转
 /// struct 缺少json中属性可解析成功，多余出来的不解析成功，类型与json 不匹配也解析不成功
-struct Post: Codable {
-    let videoURLSource: String
-    let latitude: String
-    let auditCode, id, questionProductID: Int
-    let isEditorial: Bool
-    let topic: Topic
-    let browseSum, favourSum: Int
-    let isCollect: Bool
-    let wgs84Longitude: String
-    let quizzer: Comment
-    let descriptionHandled, title, videoID: String
-    let commentLimit: Bool
-    let longitude: String
-    let status: Int
-    let surfacePlot: String
-    let avatar: String
-    let resultDescription: String
-    let type: Int
-    let address: String
-    let location: String
-    let videoURLSuper, miniPath, auditDescription: String
-    let operationStyleType: Int
-    let videoURLStandard, videoURL: String
-    let iwomVo, comment: Comment
-    let isAttention: Bool
-    let playTime: String
-    let commentSum: Int
-    let videoPixel: String
-    let collectSum: Int
-    let pixel: String
-    let isFavour: Bool
-    let content: String
-    let level: Int
-    let wgs84Latitude, guide: String
-    let accountID: String
-    let nickname, urlRule: String
-    let releaseTime: Int
-    let poiID, videoURLHigh: String
-    let shareSum, answerSum: Int
-    let isShowOperationTitle: Bool
-    let group: Comment
-    let userIdentities: [Int]
 
+struct PostList: Codable {
+    var list: [Post]
 }
 
-let postList = loadPostListData("postListData_recommend.json")
+struct Post: Codable {
+    let id: Int
+    let avatar: String // image name
+    let vip: Bool
+    let name: String
+    let date: String // yyyy-MM-dd HH:mm:ss
+    
+    var isFollowed: Bool
+    
+    let text: String
+    let images: [String] // image names
+    
+//    var commentCount: Int
+//    var likeCount: Int
+    var isLiked: Bool 
+}
+
+// 全局变量
+let postList = loadPostListData("PostListData_recommend_1.json")
 
 
 // 解析json数据
@@ -71,14 +44,24 @@ func loadPostListData(_ fileName: String) -> PostList {
         fatalError("不能找到\(fileName) 文件")
     }
     
-    guard let data = try? Data(contentsOf: url) else {
+    let data: Data
+    let str: String
+    do {
+        data = try Data(contentsOf: url)
+    } catch let error {
+        print("错误信息：\(error)")
         fatalError("加载\(fileName)文件出错")
     }
-    
-    guard let list = try? JSONDecoder().decode(PostList.self, from: data) else {
-        fatalError("解析list json 数据错误")
+
+    str = String(data: data, encoding: .utf8) ?? "字符串"
+    let dataStr = str;
+    print(dataStr)
+    do {
+        return try JSONDecoder().decode(PostList.self, from: data)
+    } catch let er {
+        print("错误信息：\(er)")
+        fatalError("解析 \(fileName) json 数据到\(PostList.self)错误")
     }
-    return list
 }
 
 // MARK: - Comment
