@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct PostCell: View {
-//    let post: Post
+    let post: Post
     var body: some View {
         HStack(alignment: .center, spacing: 2, content: {
-            Image(uiImage: UIImage(named: "turtlerock")!)
+            Image(uiImage: UIImage(named: post.avatar)!)
                 .resizable()
                 .frame(width: 50, height: 50)
                 .scaledToFill()
@@ -21,21 +21,23 @@ struct PostCell: View {
                     LevelBadge()
                         .offset(x: 18.0, y: 18.0)
                 )
-                .padding(5)
+                .padding(8)
             VStack(alignment: .leading, spacing: 5, content: {
-                Text("post.nickname")
+                Text(post.name)
                     .font(.system(size: 16))
                     .foregroundColor(.black)
                     .lineLimit(1)
-                Text(String("post.releaseTime"))
+                Text(String(post.date))
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
             })
             
-//            if !post.isAttention {
+            if !post.isLiked {
                 Spacer()
                 Button(action: {
                     print("点击关注按钮")
+                    let list = postList.list
+                    let data = list[0]
                 }) {
                     Text("关注")
                         .foregroundColor(.blue)
@@ -47,13 +49,13 @@ struct PostCell: View {
                     )
                 }
                 .padding(10)
-//            }
+            }
         })
     }
 }
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell()
+        PostCell(post: postList.list[0])
     }
 }

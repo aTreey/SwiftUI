@@ -20,7 +20,8 @@ let landmarkData: [Landmark] = load("landmarkData.json")
 func load<T: Codable>(_ filename: String) -> T {
     let data: Data
     
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else { fatalError("在main bundle 中找不到文件")
+    guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {
+        fatalError("在main bundle 中找不到文件")
     }
     
     do {
