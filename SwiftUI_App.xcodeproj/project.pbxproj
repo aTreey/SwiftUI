@@ -14,6 +14,8 @@
 		731FEDD2254BBBAC0064326D /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 731FEDCF254BBBAC0064326D /* landmarkData.json */; };
 		731FEDD3254BBBAC0064326D /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 731FEDCF254BBBAC0064326D /* landmarkData.json */; };
 		731FEDD4254BBBAC0064326D /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 731FEDCF254BBBAC0064326D /* landmarkData.json */; };
+		73226818256F724B001E7F41 /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73226817256F724B001E7F41 /* ActionButtonView.swift */; };
+		73226824256FFCAD001E7F41 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73226823256FFCAD001E7F41 /* PostListView.swift */; };
 		737AF20624F4E3C300C28F6A /* DomoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AF20524F4E3C300C28F6A /* DomoListRow.swift */; };
 		7393F30C24F51508001001B9 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393F30B24F51508001001B9 /* Badge.swift */; };
 		7393F30E24F51644001001B9 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393F30D24F51644001001B9 /* HexagonParameters.swift */; };
@@ -210,6 +212,8 @@
 		731BB303254A8666002EFD74 /* LevelBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelBadge.swift; sourceTree = "<group>"; };
 		731BB310254A87DF002EFD74 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		731FEDCF254BBBAC0064326D /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
+		73226817256F724B001E7F41 /* ActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
+		73226823256FFCAD001E7F41 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		737AF20524F4E3C300C28F6A /* DomoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomoListRow.swift; sourceTree = "<group>"; };
 		7393F30B24F51508001001B9 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		7393F30D24F51644001001B9 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
@@ -443,6 +447,8 @@
 				731BB30F254A87C7002EFD74 /* Model */,
 				731BB302254A8615002EFD74 /* CommonWidget */,
 				7393F31124F8DEE3001001B9 /* PostCell.swift */,
+				73226823256FFCAD001E7F41 /* PostListView.swift */,
+				73226817256F724B001E7F41 /* ActionButtonView.swift */,
 			);
 			path = FeedList;
 			sourceTree = "<group>";
@@ -1006,6 +1012,7 @@
 				73A4E4D32511B88E0075D32A /* TestStack.swift in Sources */,
 				73A4E4D72511E0600075D32A /* TextDemo.swift in Sources */,
 				73AB70862512F623003D69B5 /* ButtonDemo.swift in Sources */,
+				73226818256F724B001E7F41 /* ActionButtonView.swift in Sources */,
 				7393F30E24F51644001001B9 /* HexagonParameters.swift in Sources */,
 				73FAA6BD22D8E6FC0053BCC8 /* AppDelegate.swift in Sources */,
 				73CA711B24F4E14700D8D38D /* DemoList.swift in Sources */,
@@ -1029,6 +1036,7 @@
 				73AB70552512EADD003D69B5 /* WebImageDemo.swift in Sources */,
 				731BB304254A8666002EFD74 /* LevelBadge.swift in Sources */,
 				73AB708B25132001003D69B5 /* ButtonDemo2.swift in Sources */,
+				73226824256FFCAD001E7F41 /* PostListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
