@@ -17,7 +17,7 @@ struct PostList: Codable {
     var list: [Post]
 }
 
-struct Post: Codable {
+struct Post: Codable, Identifiable {
     let id: Int
     let avatar: String // image name
     let vip: Bool
@@ -29,14 +29,50 @@ struct Post: Codable {
     let text: String
     let images: [String] // image names
     
-//    var commentCount: Int
-//    var likeCount: Int
-    var isLiked: Bool 
+    var commentCount: Int
+    var likeCount: Int
+    var isLiked: Bool
+}
+
+extension Post {
+    var avatarImage: Image {
+        return loadImage(name: avatar)
+    }
+        
+    var commentText: String {
+        if commentCount <= 0 {
+            return "评论"
+        }
+
+        if commentCount < 1000 {
+            return "\(commentCount)"
+        }
+        return String(format: "%.1fK", Double(commentCount) / 1000)
+    }
+    
+    var likeText: String {
+        if likeCount <= 0 {
+            return "点赞"
+        }
+        
+        if likeCount < 1000 {
+            return "\(likeCount)"
+        }
+        return String(format: "%.1fK", Double(likeCount) / 1000)
+    }
 }
 
 // 全局变量
 let postList = loadPostListData("PostListData_recommend_1.json")
+let kScreenWidth = UIScreen.main.bounds.width
+let kScreenHeight = UIScreen.main.bounds.height
+let kScale = UIScreen.main.scale
 
+
+// 加载图片
+func loadImage(name: String) -> Image {
+    return Image(uiImage: UIImage(named: name)!)
+}
 
 // 解析json数据
 func loadPostListData(_ fileName: String) -> PostList {
