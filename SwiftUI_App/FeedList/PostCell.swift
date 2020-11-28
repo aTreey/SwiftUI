@@ -12,7 +12,7 @@ struct PostCell: View {
     let post: Post
     var body: some View {
         VStack(alignment: .leading, spacing: 10, content: {
-            HStack(alignment: .center, spacing: 2, content: {
+            HStack(spacing: 5, content: {
                 post.avatarImage
                     .resizable()
                     .frame(width: 50, height: 50)
@@ -22,7 +22,6 @@ struct PostCell: View {
                         LevelBadge()
                             .offset(x: 18.0, y: 18.0)
                     )
-                    .padding(8)
                 VStack(alignment: .leading, spacing: 5, content: {
                     Text(post.name)
                         .font(.system(size: 16))
@@ -32,6 +31,7 @@ struct PostCell: View {
                         .font(.system(size: 12))
                         .foregroundColor(.gray)
                 })
+                .padding(.leading, 10)
                 
                 if post.isLiked {
                     Spacer()
@@ -47,9 +47,9 @@ struct PostCell: View {
                             .overlay(
                                 RoundedRectangle(cornerRadius: 13)
                                     .stroke(Color.blue, lineWidth: 1)
-                        )
+                            )
                     }
-                    .padding(10)
+                    .buttonStyle(BorderlessButtonStyle())
                 }
             })
             // 文字描述
@@ -69,21 +69,23 @@ struct PostCell: View {
             HStack(spacing: 0, content: {
                 Spacer()
                 ActionButtonView(image: "message", text:post.commentText, color: .black) {
-
+                    print("评论按钮")
                 }
                 Spacer()
                 ActionButtonView(image: "heart", text: post.likeText, color: .black) {
-
+                    print("点赞按钮")
                 }
                 Spacer()
             })
-            .padding(.horizontal, 10)
+            Rectangle()
+                .padding(.horizontal, 0)
+                .frame(height: 5)
+                .foregroundColor(Color.secondary)
+                .padding(.horizontal, -15)
+            
         })
-        .padding(.horizontal, 10)
-        Rectangle()
-            .padding(.horizontal, 0)
-            .frame(height: 5)
-            .foregroundColor(.gray)
+        .padding(.horizontal, 15)
+        .padding(.top, 15)
     }
 }
 
