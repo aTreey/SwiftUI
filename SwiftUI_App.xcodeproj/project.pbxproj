@@ -16,6 +16,7 @@
 		731FEDD4254BBBAC0064326D /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 731FEDCF254BBBAC0064326D /* landmarkData.json */; };
 		73226818256F724B001E7F41 /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73226817256F724B001E7F41 /* ActionButtonView.swift */; };
 		73226824256FFCAD001E7F41 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73226823256FFCAD001E7F41 /* PostListView.swift */; };
+		732EF47B258F70D900FCEF72 /* LeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732EF47A258F70D900FCEF72 /* LeetCode.swift */; };
 		737AF20624F4E3C300C28F6A /* DomoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AF20524F4E3C300C28F6A /* DomoListRow.swift */; };
 		7393F30C24F51508001001B9 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393F30B24F51508001001B9 /* Badge.swift */; };
 		7393F30E24F51644001001B9 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393F30D24F51644001001B9 /* HexagonParameters.swift */; };
@@ -142,6 +143,7 @@
 		73E2492B248E862B00BFB8C9 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E2492A248E862B00BFB8C9 /* UserData.swift */; };
 		73F28CD82551247D0090974D /* PostListData_recommend_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 73F28CD72551247C0090974D /* PostListData_recommend_1.json */; };
 		73F28CF0255126C50090974D /* Recommond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F28CEF255126C50090974D /* Recommond.swift */; };
+		73F7651F25ABFD0A00429C7B /* PostDetaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7651E25ABFD0A00429C7B /* PostDetaiView.swift */; };
 		73FAA6BD22D8E6FC0053BCC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FAA6BC22D8E6FC0053BCC8 /* AppDelegate.swift */; };
 		73FAA6BF22D8E6FC0053BCC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FAA6BE22D8E6FC0053BCC8 /* SceneDelegate.swift */; };
 		73FAA6C122D8E6FC0053BCC8 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FAA6C022D8E6FC0053BCC8 /* LandmarkDetail.swift */; };
@@ -214,6 +216,7 @@
 		731FEDCF254BBBAC0064326D /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		73226817256F724B001E7F41 /* ActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
 		73226823256FFCAD001E7F41 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		732EF47A258F70D900FCEF72 /* LeetCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.swift; sourceTree = "<group>"; };
 		737AF20524F4E3C300C28F6A /* DomoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomoListRow.swift; sourceTree = "<group>"; };
 		7393F30B24F51508001001B9 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		7393F30D24F51644001001B9 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
@@ -343,6 +346,7 @@
 		73E2492A248E862B00BFB8C9 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		73F28CD72551247C0090974D /* PostListData_recommend_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostListData_recommend_1.json; sourceTree = "<group>"; };
 		73F28CEF255126C50090974D /* Recommond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommond.swift; sourceTree = "<group>"; };
+		73F7651E25ABFD0A00429C7B /* PostDetaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetaiView.swift; sourceTree = "<group>"; };
 		73FAA6B922D8E6FC0053BCC8 /* SwiftUI_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FAA6BC22D8E6FC0053BCC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73FAA6BE22D8E6FC0053BCC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -404,6 +408,7 @@
 			children = (
 				731BB310254A87DF002EFD74 /* Post.swift */,
 				73F28CEF255126C50090974D /* Recommond.swift */,
+				732EF47A258F70D900FCEF72 /* LeetCode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				731BB302254A8615002EFD74 /* CommonWidget */,
 				7393F31124F8DEE3001001B9 /* PostCell.swift */,
 				73226823256FFCAD001E7F41 /* PostListView.swift */,
+				73F7651E25ABFD0A00429C7B /* PostDetaiView.swift */,
 				73226817256F724B001E7F41 /* ActionButtonView.swift */,
 			);
 			path = FeedList;
@@ -1017,6 +1023,7 @@
 				73FAA6BD22D8E6FC0053BCC8 /* AppDelegate.swift in Sources */,
 				73CA711B24F4E14700D8D38D /* DemoList.swift in Sources */,
 				73A4E4D52511DCD70075D32A /* TextFieldDemo.swift in Sources */,
+				73F7651F25ABFD0A00429C7B /* PostDetaiView.swift in Sources */,
 				73D541C322DCBEDE001936B3 /* CircleImage.swift in Sources */,
 				73A04E4222F92B9600A00416 /* MapView.swift in Sources */,
 				731BB311254A87DF002EFD74 /* Post.swift in Sources */,
@@ -1024,6 +1031,7 @@
 				73AB70882512F96A003D69B5 /* DatePickerDemo.swift in Sources */,
 				73B7D770245AC043005E3DC4 /* LandmarkList.swift in Sources */,
 				73FAA6C122D8E6FC0053BCC8 /* LandmarkDetail.swift in Sources */,
+				732EF47B258F70D900FCEF72 /* LeetCode.swift in Sources */,
 				737AF20624F4E3C300C28F6A /* DomoListRow.swift in Sources */,
 				73B383912459586500C7AAD5 /* LandmarkRow.swift in Sources */,
 				73F28CF0255126C50090974D /* Recommond.swift in Sources */,
