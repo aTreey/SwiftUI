@@ -12,15 +12,24 @@ struct PostListView: View {
     
     init() {
         UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().separatorColor = .cyan
         UITableViewCell.appearance().selectionStyle = .none
+        // 设置cell右边箭头不管用
+        UITableViewCell.appearance().accessoryView = nil
     }
     
     var body: some View {
         // 实际上是创建了TableView
         List {
             ForEach(postList.list) { post in
-                PostCell(post: post)
-                    .listRowInsets(EdgeInsets())
+                ZStack {
+                    PostCell(post: post)
+                    NavigationLink(
+                        destination: PostDetaiView(post: post),
+                        label: { })
+                        .hidden()
+                }
+                .listRowInsets(EdgeInsets())
             }
         }
     }
@@ -28,6 +37,10 @@ struct PostListView: View {
 
 struct PostList_Previews: PreviewProvider {
     static var previews: some View {
-        PostListView()
+            NavigationView {
+                PostListView()
+                    .navigationBarTitle("首页", displayMode: .inline)
+                    .navigationBarHidden(false)
+            }
     }
 }
