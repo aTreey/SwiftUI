@@ -18,12 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
+        // 添加环境变量
+//        let contentView = LandmarkList().environmentObject(UserData())
+        let contentView = HomeView().environmentObject(PostUserData())
 
         // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             // 给 LandmarkList 添加 environmentObject(_:) 修饰符。
-            window.rootViewController = UIHostingController(rootView: LandmarkList().environmentObject(UserData()))
+            window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }

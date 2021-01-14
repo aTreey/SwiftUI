@@ -10,6 +10,9 @@ import SwiftUI
 
 struct PostListView: View {
     
+    // 使用环境对象
+    @EnvironmentObject var userData: PostUserData
+    
     init() {
         UITableView.appearance().separatorStyle = .none
         UITableView.appearance().separatorColor = .cyan
@@ -21,7 +24,7 @@ struct PostListView: View {
     var body: some View {
         // 实际上是创建了TableView
         List {
-            ForEach(postList.list) { post in
+            ForEach(userData.postList(for: .recommend).list) { post in
                 ZStack {
                     PostCell(post: post)
                     NavigationLink(
@@ -39,8 +42,8 @@ struct PostList_Previews: PreviewProvider {
     static var previews: some View {
             NavigationView {
                 PostListView()
-                    .navigationBarTitle("首页", displayMode: .inline)
-                    .navigationBarHidden(false)
+//                    .navigationBarTitle("首页", displayMode: .inline)
+//                    .navigationBarHidden(false)
             }
     }
 }
