@@ -33,7 +33,7 @@ struct HomeView: View {
 //            }
             // 忽略底部安全区域
             .edgesIgnoringSafeArea(.bottom)
-            .navigationBarItems(leading: HomeNavgationBar(leftPercent: 1))
+//            .navigationBarItems(leading: HomeNavgationBar(leftPercent: 1))
             .navigationBarTitle("首页", displayMode: .inline)
         }
     }

@@ -21,6 +21,7 @@ struct PostDetaiView: View {
 
 struct PostDetaiView_Previews: PreviewProvider {
     static var previews: some View {
-        PostDetaiView(post: postList.list.first!)
+        let userData = PostUserData()
+        return PostDetaiView(post: userData.recommendPostList.list[0]).environmentObject(userData)
     }
 }

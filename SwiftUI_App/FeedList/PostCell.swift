@@ -10,8 +10,17 @@ import SwiftUI
 
 struct PostCell: View {
     let post: Post
+    var bindPost: Post {
+        userData.post(forId: post.id)!
+    }
+    
+    @EnvironmentObject var userData: PostUserData
+    @State var presentComment: Bool = false
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 10, content: {
+        var post = bindPost
+        // 使用post局部变量
+        return VStack(alignment: .leading, spacing: 10, content: {
             HStack(spacing: 5, content: {
                 post.avatarImage
                     .resizable()
@@ -37,8 +46,9 @@ struct PostCell: View {
                     Spacer()
                     Button(action: {
                         print("点击关注按钮")
-                        let list = postList.list
-                        let data = list[0]
+                        // 更新关注数据
+                        post.isFollowed = true
+                        userData.update(post)
                     }) {
                         Text("关注")
                             .foregroundColor(.blue)
@@ -70,17 +80,31 @@ struct PostCell: View {
                 Spacer()
                 ActionButtonView(image: "message", text:post.commentText, color: .black) {
                     print("评论按钮")
+                    self.presentComment = true
+                }
+                .sheet(isPresented: $presentComment) {
+                    CommentInput(post: post).environmentObject(self.userData)
                 }
                 Spacer()
-                ActionButtonView(image: "heart", text: post.likeText, color: .black) {
+                ActionButtonView(image:post.isLiked ? "heart.fill" : "heart",
+                                 text: post.likeText,
+                                 color: post.isLiked ? .blue : .black) {
                     print("点赞按钮")
+                    if post.isLiked {
+                        post.isLiked = false
+                        post.likeCount -= 1
+                    } else {
+                        post.isLiked = true
+                        post.likeCount += 1
+                    }
+                    self.userData.update(post)
                 }
                 Spacer()
             })
             Rectangle()
                 .padding(.horizontal, 0)
                 .frame(height: 5)
-                .foregroundColor(Color.secondary)
+                .foregroundColor(Color(UIColor.systemGray6))
                 .padding(.horizontal, -15)
             
         })
@@ -91,6 +115,7 @@ struct PostCell: View {
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell(post: postList.list[0])
+        let userData = PostUserData()
+        return PostCell(post: userData.recommendPostList.list[0]).environmentObject(userData)
     }
 }

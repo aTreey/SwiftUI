@@ -63,11 +63,11 @@ extension Post {
 }
 
 // 全局变量
-let postList = loadPostListData("PostListData_recommend_1.json")
+//let postList = loadPostListData("PostListData_recommend_1.json")
 let kScreenWidth = UIScreen.main.bounds.width
 let kScreenHeight = UIScreen.main.bounds.height
 let kScale = UIScreen.main.scale
-
+let kImageSpace: CGFloat = 4
 
 // 加载图片
 func loadImage(name: String) -> Image {
