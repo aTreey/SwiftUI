@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PostListView: View {
     
-    // 使用环境对象
+    // 使用环境对象，可以从环境对象中获取
     @EnvironmentObject var userData: PostUserData
     
     init() {

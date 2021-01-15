@@ -45,7 +45,7 @@ extension PostUserData {
         }
     }
     
-    func post(for id: Int) -> Post? {
+    func post(forId id: Int) -> Post? {
         if let index = recommendPostDict[id] {
             return recommendPostList.list[index]
         }
