@@ -11,20 +11,27 @@ import SwiftUI
 
 /// 用户等级组件
 struct LevelBadge: View {
-    let level = 0;
+    let level = 0
+    var icon: String {
+        switch level {
+        case 1:
+            return "b"
+        case 2:
+            return "c"
+        case 3:
+            return "d"
+        default:
+            return "icon_silver"
+        }
+    }
     var body: some View {
         Group {
             if level == 0 {
-                Text("V")
-                    .font(.system(size: 11))
-                    .frame(width: 15, height: 15)
-                    .foregroundColor(Color.yellow)
-                    .background(Color.red)
-                    .clipShape(Circle())
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 7.5)
-                            .stroke(Color.white)
-                    )
+                Image(icon)
+                    .resizable()
+                    .frame(width: 15,
+                           height: 15)
+                    .scaledToFill()
             }
         }
     }
