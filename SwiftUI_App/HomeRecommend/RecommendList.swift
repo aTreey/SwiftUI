@@ -9,8 +9,24 @@
 import SwiftUI
 
 struct RecommendList: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach((0...10), id: \.self) { post in
+                    ZStack {
+                        RecommendCell()
+                        NavigationLink(
+                            destination: RecommendCell(),
+                            label: { })
+                            .hidden()
+                    }
+                    .listRowInsets(EdgeInsets())
+                }
+            }
+            .navigationBarItems(leading: HomeCustomNavBar())
+            .navigationBarTitle("", displayMode: .inline)
+        }
     }
 }
 

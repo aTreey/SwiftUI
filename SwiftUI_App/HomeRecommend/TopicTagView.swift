@@ -8,14 +8,33 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct TopicTagView: View {
+    var columns: [GridItem] =
+             Array(repeating: .init(.flexible()), count: 2)
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if #available(iOS 14.0, *) {
+            LazyVGrid(columns: columns) {
+                ForEach((0...10), id: \.self) {
+                    let codepoint = $0 + 0x1f600
+                    let codepointString = String(format: "%02X", codepoint)
+                    Text("\(codepointString)")
+                    let emoji = String(Character(UnicodeScalar(codepoint)!))
+                    Text("\(emoji)")
+                }
+            }.font(.largeTitle)
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
 
 struct TopicTagView_Previews: PreviewProvider {
     static var previews: some View {
-        TopicTagView()
+        if #available(iOS 14.0, *) {
+            TopicTagView()
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

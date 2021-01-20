@@ -15,6 +15,8 @@ struct RecommendCell: View {
         return Array(PostUserData().recommendPostList.list[0].images)
     }
     
+    @State var presentComment: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             ProfileView()
@@ -23,13 +25,56 @@ struct RecommendCell: View {
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .font(.system(size: 18))
                 .lineLimit(1)
-                .multilineTextAlignment(.leading)
+                .padding(.vertical, 4)
             Text(desc)
                 .font(.system(size: 14))
                 .lineLimit(2)
+                .lineSpacing(4)
+                .foregroundColor(.black)
+                .multilineTextAlignment(.leading)
+                .padding(.vertical, 6)
+                            
+            Button(action: {    }) {
+                HStack {
+                    Text("# 这是一个话题标签")
+                        .font(.system(size: 14))
+                        .padding(.vertical, 10)
+                }
+                
+                .foregroundColor(.blue)
+                .cornerRadius(40)
+            }
+            
+            ImageListView(images: images, width: kScreenWidth - 24)
                 .padding(.vertical, 5)
-            PostImageList(images: images, width: kScreenWidth - 24)
-                .padding(.vertical, 5)
+            
+            HStack(spacing: 0, content: {
+                ActionButtonView(image: "message", text:"6789", color: .black) {
+                    print("评论按钮")
+//                    self.presentComment = true
+                }
+                
+                .sheet(isPresented: $presentComment) {
+//                    CommentInput(post: post).environmentObject(self.userData)
+                }
+                
+                ActionButtonView(image: "heart.fill",
+                                 text: "3.2 万",
+                                 color: .black) {
+                    print("点赞按钮")
+//                    if post.isLiked {
+//                        post.isLiked = false
+//                        post.likeCount -= 1
+//                    } else {
+//                        post.isLiked = true
+//                        post.likeCount += 1
+//                    }
+//                    self.userData.update(post)
+                }
+                .padding(.leading, 15)
+            })
+            .padding(.vertical, 15)
+            
         }
         .padding(.horizontal, 12)
     }
