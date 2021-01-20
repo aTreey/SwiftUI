@@ -30,7 +30,7 @@ struct ActionButtonView: View {
     }
 }
 
-struct ActionView_Previews: PreviewProvider {
+struct ActionButtonView_Previews: PreviewProvider {
     static var previews: some View {
         ActionButtonView(image: "heart", text: "点赞", color: .red, action: {
             print("点击了动作按钮")

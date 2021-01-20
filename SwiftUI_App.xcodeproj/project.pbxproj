@@ -12,6 +12,13 @@
 		4FC0840C1F65520744B8F0EB /* Pods_SwiftUI_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985767269E32C4FE82A1FE17 /* Pods_SwiftUI_App.framework */; };
 		7301084F25B136F300E2B7F3 /* CommentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7301084E25B136F300E2B7F3 /* CommentTextView.swift */; };
 		7301085C25B1611A00E2B7F3 /* KeyboradResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7301085B25B1611A00E2B7F3 /* KeyboradResponder.swift */; };
+		731B866325B6D06A00504D07 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B866225B6D06A00504D07 /* ActionView.swift */; };
+		731B866A25B6D95E00504D07 /* HomeActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B866925B6D95E00504D07 /* HomeActionView.swift */; };
+		731B867825B7D46500504D07 /* DemoAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B867725B7D46500504D07 /* DemoAlignment.swift */; };
+		731B867F25B7F49E00504D07 /* DemoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B867E25B7F49E00504D07 /* DemoLayout.swift */; };
+		731B868625B7F86C00504D07 /* DemoGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B868525B7F86C00504D07 /* DemoGeometryReader.swift */; };
+		731B868D25B7FC9500504D07 /* DemoSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B868C25B7FC9500504D07 /* DemoSegment.swift */; };
+		731B869425B80BE000504D07 /* HomeCustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B869325B80BE000504D07 /* HomeCustomNavBar.swift */; };
 		731BB304254A8666002EFD74 /* LevelBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731BB303254A8666002EFD74 /* LevelBadge.swift */; };
 		731BB311254A87DF002EFD74 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731BB310254A87DF002EFD74 /* Post.swift */; };
 		731FEDD0254BBBAC0064326D /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 731FEDCF254BBBAC0064326D /* landmarkData.json */; };
@@ -240,6 +247,14 @@
 		7301084E25B136F300E2B7F3 /* CommentTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTextView.swift; sourceTree = "<group>"; };
 		7301085525B13E7E00E2B7F3 /* SwiftUI属性装饰器.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SwiftUI属性装饰器.md"; sourceTree = "<group>"; };
 		7301085B25B1611A00E2B7F3 /* KeyboradResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboradResponder.swift; sourceTree = "<group>"; };
+		731B866225B6D06A00504D07 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		731B866925B6D95E00504D07 /* HomeActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActionView.swift; sourceTree = "<group>"; };
+		731B867025B7CD1800504D07 /* 1.布局特性.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "1.布局特性.md"; sourceTree = "<group>"; };
+		731B867725B7D46500504D07 /* DemoAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAlignment.swift; sourceTree = "<group>"; };
+		731B867E25B7F49E00504D07 /* DemoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLayout.swift; sourceTree = "<group>"; };
+		731B868525B7F86C00504D07 /* DemoGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoGeometryReader.swift; sourceTree = "<group>"; };
+		731B868C25B7FC9500504D07 /* DemoSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSegment.swift; sourceTree = "<group>"; };
+		731B869325B80BE000504D07 /* HomeCustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomNavBar.swift; sourceTree = "<group>"; };
 		731BB303254A8666002EFD74 /* LevelBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelBadge.swift; sourceTree = "<group>"; };
 		731BB310254A87DF002EFD74 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		731FEDCF254BBBAC0064326D /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
@@ -475,11 +490,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		731B867625B7D04600504D07 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		731BB302254A8615002EFD74 /* CommonWidget */ = {
 			isa = PBXGroup;
 			children = (
 				7301085525B13E7E00E2B7F3 /* SwiftUI属性装饰器.md */,
 				73226817256F724B001E7F41 /* ActionButtonView.swift */,
+				731B866225B6D06A00504D07 /* ActionView.swift */,
 				73CCA59C25B0217900F3791B /* PostImageList.swift */,
 				73CCA5A325B03D4500F3791B /* CommentInput.swift */,
 				7301084E25B136F300E2B7F3 /* CommentTextView.swift */,
@@ -516,7 +539,7 @@
 			path = "Demo2Drawing Paths and Shapes ";
 			sourceTree = "<group>";
 		};
-		7393F30F24F8D8B0001001B9 /* Demo1List */ = {
+		7393F30F24F8D8B0001001B9 /* LandmarkList */ = {
 			isa = PBXGroup;
 			children = (
 				73B3836F2459485200C7AAD5 /* Models */,
@@ -528,7 +551,7 @@
 				73D541C222DCBEDE001936B3 /* CircleImage.swift */,
 				73A04E4122F92B9600A00416 /* MapView.swift */,
 			);
-			path = Demo1List;
+			path = LandmarkList;
 			sourceTree = "<group>";
 		};
 		7393F31024F8DE8B001001B9 /* FeedList */ = {
@@ -556,6 +579,11 @@
 				73AB70852512F623003D69B5 /* ButtonDemo.swift */,
 				73AB708A25132001003D69B5 /* ButtonDemo2.swift */,
 				73AB70872512F96A003D69B5 /* DatePickerDemo.swift */,
+				731B867725B7D46500504D07 /* DemoAlignment.swift */,
+				731B867E25B7F49E00504D07 /* DemoLayout.swift */,
+				731B868525B7F86C00504D07 /* DemoGeometryReader.swift */,
+				731B868C25B7FC9500504D07 /* DemoSegment.swift */,
+				731B867025B7CD1800504D07 /* 1.布局特性.md */,
 			);
 			path = BaseControl;
 			sourceTree = "<group>";
@@ -606,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				73B2823025B55F47007DE3F3 /* ProfileView.swift */,
+				731B866925B6D95E00504D07 /* HomeActionView.swift */,
 				731BB303254A8666002EFD74 /* LevelBadge.swift */,
 				73B2825625B56E1B007DE3F3 /* Identity.swift */,
 				73B2823C25B56911007DE3F3 /* AttentionButton.swift */,
@@ -613,6 +642,7 @@
 				73E0BB0625B67E2000622FCF /* ImageListView.swift */,
 				73B2824A25B56BC6007DE3F3 /* RecommendCell.swift */,
 				73B2824325B56BB2007DE3F3 /* RecommendList.swift */,
+				731B869325B80BE000504D07 /* HomeCustomNavBar.swift */,
 			);
 			path = HomeRecommend;
 			sourceTree = "<group>";
@@ -780,11 +810,12 @@
 		73FAA6BB22D8E6FC0053BCC8 /* SwiftUI_App */ = {
 			isa = PBXGroup;
 			children = (
+				731B867625B7D04600504D07 /* Demo */,
+				73A4E4D82511E0880075D32A /* BaseControl */,
 				73B2822A25B55E99007DE3F3 /* HomeRecommend */,
 				73B2821925B1E610007DE3F3 /* Networking */,
-				73A4E4D82511E0880075D32A /* BaseControl */,
 				7393F31024F8DE8B001001B9 /* FeedList */,
-				7393F30F24F8D8B0001001B9 /* Demo1List */,
+				7393F30F24F8D8B0001001B9 /* LandmarkList */,
 				7393F30A24F514DA001001B9 /* Demo2Drawing Paths and Shapes  */,
 				73FAA6BC22D8E6FC0053BCC8 /* AppDelegate.swift */,
 				73A4E4D22511B88E0075D32A /* TestStack.swift */,
@@ -1298,6 +1329,7 @@
 			files = (
 				73B2822025B1E64C007DE3F3 /* NetworkManager.swift in Sources */,
 				73B2823125B55F47007DE3F3 /* ProfileView.swift in Sources */,
+				731B867825B7D46500504D07 /* DemoAlignment.swift in Sources */,
 				73B2824425B56BB2007DE3F3 /* RecommendList.swift in Sources */,
 				73A4E4D32511B88E0075D32A /* TestStack.swift in Sources */,
 				73A4E4D72511E0600075D32A /* TextDemo.swift in Sources */,
@@ -1308,6 +1340,7 @@
 				73E0BB0725B67E2000622FCF /* ImageListView.swift in Sources */,
 				73FAA6BD22D8E6FC0053BCC8 /* AppDelegate.swift in Sources */,
 				73B2824B25B56BC6007DE3F3 /* RecommendCell.swift in Sources */,
+				731B866A25B6D95E00504D07 /* HomeActionView.swift in Sources */,
 				7301084F25B136F300E2B7F3 /* CommentTextView.swift in Sources */,
 				7301085C25B1611A00E2B7F3 /* KeyboradResponder.swift in Sources */,
 				73CA711B24F4E14700D8D38D /* DemoList.swift in Sources */,
@@ -1332,15 +1365,20 @@
 				73E2492B248E862B00BFB8C9 /* UserData.swift in Sources */,
 				7393F30C24F51508001001B9 /* Badge.swift in Sources */,
 				73CCA5A425B03D4500F3791B /* CommentInput.swift in Sources */,
+				731B866325B6D06A00504D07 /* ActionView.swift in Sources */,
 				73A4E4DA2511EA110075D32A /* ImageDemo.swift in Sources */,
+				731B867F25B7F49E00504D07 /* DemoLayout.swift in Sources */,
 				73B38393245983DA00C7AAD5 /* Data.swift in Sources */,
 				73CCA58025AFDF4000F3791B /* PostUserData.swift in Sources */,
+				731B869425B80BE000504D07 /* HomeCustomNavBar.swift in Sources */,
 				73B2823D25B56911007DE3F3 /* AttentionButton.swift in Sources */,
 				7393F31224F8DEE3001001B9 /* PostCell.swift in Sources */,
+				731B868D25B7FC9500504D07 /* DemoSegment.swift in Sources */,
 				73AB70552512EADD003D69B5 /* WebImageDemo.swift in Sources */,
 				731BB304254A8666002EFD74 /* LevelBadge.swift in Sources */,
 				73AB708B25132001003D69B5 /* ButtonDemo2.swift in Sources */,
 				73226824256FFCAD001E7F41 /* PostListView.swift in Sources */,
+				731B868625B7F86C00504D07 /* DemoGeometryReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
