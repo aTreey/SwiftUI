@@ -8,15 +8,7 @@
 
 import SwiftUI
 
-struct Recommond: View {
-    var body: some View {
-        Text("测试")
-    }
+struct Recommond {
+    
 }
 
-
-struct Recommond_Previews: PreviewProvider {
-    static var previews: some View {
-        Recommond()
-    }
-}

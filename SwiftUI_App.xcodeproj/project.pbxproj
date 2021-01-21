@@ -19,6 +19,7 @@
 		731B868625B7F86C00504D07 /* DemoGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B868525B7F86C00504D07 /* DemoGeometryReader.swift */; };
 		731B868D25B7FC9500504D07 /* DemoSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B868C25B7FC9500504D07 /* DemoSegment.swift */; };
 		731B869425B80BE000504D07 /* HomeCustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B869325B80BE000504D07 /* HomeCustomNavBar.swift */; };
+		731B86B025B85C2F00504D07 /* DataHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B86AF25B85C2F00504D07 /* DataHandle.swift */; };
 		731BB304254A8666002EFD74 /* LevelBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731BB303254A8666002EFD74 /* LevelBadge.swift */; };
 		731BB311254A87DF002EFD74 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731BB310254A87DF002EFD74 /* Post.swift */; };
 		731FEDD0254BBBAC0064326D /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 731FEDCF254BBBAC0064326D /* landmarkData.json */; };
@@ -255,6 +256,7 @@
 		731B868525B7F86C00504D07 /* DemoGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoGeometryReader.swift; sourceTree = "<group>"; };
 		731B868C25B7FC9500504D07 /* DemoSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSegment.swift; sourceTree = "<group>"; };
 		731B869325B80BE000504D07 /* HomeCustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomNavBar.swift; sourceTree = "<group>"; };
+		731B86AF25B85C2F00504D07 /* DataHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandle.swift; sourceTree = "<group>"; };
 		731BB303254A8666002EFD74 /* LevelBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelBadge.swift; sourceTree = "<group>"; };
 		731BB310254A87DF002EFD74 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		731FEDCF254BBBAC0064326D /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
@@ -490,11 +492,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		731B867625B7D04600504D07 /* Demo */ = {
+		731B869F25B8135E00504D07 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Demo;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		731B86AE25B85BFD00504D07 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				731B86AF25B85C2F00504D07 /* DataHandle.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		731BB302254A8615002EFD74 /* CommonWidget */ = {
@@ -633,6 +643,7 @@
 		73B2822A25B55E99007DE3F3 /* HomeRecommend */ = {
 			isa = PBXGroup;
 			children = (
+				731B869F25B8135E00504D07 /* Model */,
 				73B2823025B55F47007DE3F3 /* ProfileView.swift */,
 				731B866925B6D95E00504D07 /* HomeActionView.swift */,
 				731BB303254A8666002EFD74 /* LevelBadge.swift */,
@@ -810,13 +821,13 @@
 		73FAA6BB22D8E6FC0053BCC8 /* SwiftUI_App */ = {
 			isa = PBXGroup;
 			children = (
-				731B867625B7D04600504D07 /* Demo */,
 				73A4E4D82511E0880075D32A /* BaseControl */,
 				73B2822A25B55E99007DE3F3 /* HomeRecommend */,
-				73B2821925B1E610007DE3F3 /* Networking */,
 				7393F31024F8DE8B001001B9 /* FeedList */,
 				7393F30F24F8D8B0001001B9 /* LandmarkList */,
 				7393F30A24F514DA001001B9 /* Demo2Drawing Paths and Shapes  */,
+				73B2821925B1E610007DE3F3 /* Networking */,
+				731B86AE25B85BFD00504D07 /* Tools */,
 				73FAA6BC22D8E6FC0053BCC8 /* AppDelegate.swift */,
 				73A4E4D22511B88E0075D32A /* TestStack.swift */,
 				73CA711A24F4E14700D8D38D /* DemoList.swift */,
@@ -1361,6 +1372,7 @@
 				737AF20624F4E3C300C28F6A /* DomoListRow.swift in Sources */,
 				73B383912459586500C7AAD5 /* LandmarkRow.swift in Sources */,
 				73F28CF0255126C50090974D /* Recommond.swift in Sources */,
+				731B86B025B85C2F00504D07 /* DataHandle.swift in Sources */,
 				73B383712459488900C7AAD5 /* Landmark.swift in Sources */,
 				73E2492B248E862B00BFB8C9 /* UserData.swift in Sources */,
 				7393F30C24F51508001001B9 /* Badge.swift in Sources */,
