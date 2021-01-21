@@ -17,7 +17,6 @@ struct PostListView: View {
         UITableView.appearance().separatorStyle = .none
         UITableView.appearance().separatorColor = .cyan
         UITableViewCell.appearance().selectionStyle = .none
-        // 设置cell右边箭头不管用
         UITableViewCell.appearance().accessoryView = nil
     }
     
@@ -41,9 +40,9 @@ struct PostListView: View {
 struct PostList_Previews: PreviewProvider {
     static var previews: some View {
             NavigationView {
-                PostListView()
-//                    .navigationBarTitle("首页", displayMode: .inline)
-//                    .navigationBarHidden(false)
+                PostListView().environmentObject(PostUserData())
+                    .navigationBarTitle("首页", displayMode: .inline)
+                    .navigationBarHidden(false)
             }
     }
 }
