@@ -12,7 +12,7 @@ import SwiftUI
 let kScreenWidth = UIScreen.main.bounds.width
 let kScreenHeight = UIScreen.main.bounds.height
 let kScale = UIScreen.main.scale
-let kImageSpace: CGFloat = 4
+let kImageSpace: CGFloat = 2
 
 // 加载图片
 func loadImage(name: String) -> Image {
