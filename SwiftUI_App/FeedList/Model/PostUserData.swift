@@ -10,8 +10,8 @@ import SwiftUI
 import Combine
 
 class PostUserData: ObservableObject {
-    @Published var recommendPostList: PostList = loadPostListData("PostListData_recommend_1.json")
-    @Published var hotPostList: PostList = loadPostListData("PostListData_recommend_1.json")
+    @Published var recommendPostList: PostList = loadJSONData("PostListData_recommend_1.json")
+    @Published var hotPostList: PostList = loadJSONData("PostListData_recommend_1.json")
     
     private var recommendPostDict: [Int: Int] = [:]
     private var hotPostDict: [Int: Int] = [:]

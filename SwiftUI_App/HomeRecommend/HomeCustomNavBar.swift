@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct HomeCustomNavBar: View {
-    var titles: [String] = ["推荐", "最新", "视频", "精华", "口碑",
-                           "问答"]
+    var titles: [String] = ["标题1", "标题2", "标题3", "标题3", "标题4",
+                           "标题5"]
     var body: some View {
         SegmentView(titles: titles)
     }

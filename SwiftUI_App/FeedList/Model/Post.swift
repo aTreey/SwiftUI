@@ -62,49 +62,6 @@ extension Post {
     }
 }
 
-// 全局变量
-//let postList = loadPostListData("PostListData_recommend_1.json")
-let kScreenWidth = UIScreen.main.bounds.width
-let kScreenHeight = UIScreen.main.bounds.height
-let kScale = UIScreen.main.scale
-let kImageSpace: CGFloat = 4
-
-// 加载图片
-func loadImage(name: String) -> Image {
-    return Image(uiImage: UIImage(named: name)!)
-}
-
-// 解析json数据
-func loadPostListData(_ fileName: String) -> PostList {
-    guard let url = Bundle.main.url(forResource: fileName, withExtension: nil) else {
-        fatalError("不能找到\(fileName) 文件")
-    }
-    
-    let data: Data
-    let str: String
-    do {
-        data = try Data(contentsOf: url)
-    } catch let error {
-        print("错误信息：\(error)")
-        fatalError("加载\(fileName)文件出错")
-    }
-
-    str = String(data: data, encoding: .utf8) ?? "字符串"
-    let dataStr = str;
-    print(dataStr)
-    do {
-        return try JSONDecoder().decode(PostList.self, from: data)
-    } catch let er {
-        print("错误信息：\(er)")
-        fatalError("解析 \(fileName) json 数据到\(PostList.self)错误")
-    }
-}
-
-// MARK: - Comment
-struct Comment: Codable {
-}
-
-
 // MARK: - Operation
 struct Operation: Codable {
     let productID, operationContentID, browseNum: Int
@@ -118,13 +75,5 @@ struct Operation: Codable {
     let name: String
 }
 
-// MARK: - Topic
-struct Topic: Codable {
-    let contentNum, productID, browseNum, topicMark: Int?
-    let type: Int?
-    let name: String?
-    let participantsNum: Int?
-}
-
-
-
+// 全局变量
+//let postList: Post = loadJSONData("PostListData_recommend_1.json")
