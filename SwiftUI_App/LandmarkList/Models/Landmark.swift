@@ -21,6 +21,9 @@ struct Landmark: Hashable, Codable, Identifiable {
     var isFavorite: Bool
     fileprivate var imageName: String
     fileprivate var coordinates: Coordinates
+    
+//    var description: String //
+
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,

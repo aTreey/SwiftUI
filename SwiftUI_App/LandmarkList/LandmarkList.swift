@@ -84,7 +84,7 @@ struct LandmarkList_Previews: PreviewProvider {
 //        // 一旦将 environmentObject(_:) 修饰符应用于父级， userData 属性就会自动获取它的值
 //        .environmentObject(UserData())
         
-        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
+        ForEach(["iPhone XS Max"], id: \.self) { deviceName in
             LandmarkList()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)

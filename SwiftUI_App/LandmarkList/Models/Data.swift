@@ -6,7 +6,7 @@
 //  Copyright © 2020 于鸿鹏. All rights reserved.
 //
 
-import UIKit
+//import UIKit
 import SwiftUI
 import CoreLocation
 

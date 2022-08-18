@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         // 添加环境变量
-//        let contentView = LandmarkList().environmentObject(UserData())
-        let contentView = HomeView().environmentObject(PostUserData())
+        let contentView = CategoryHome().environmentObject(UserData())
+//        let contentView = HomeView().environmentObject(PostUserData())
 
         // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
