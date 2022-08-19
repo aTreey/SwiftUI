@@ -65,7 +65,7 @@ struct LandmarkDetail : View {
                         .font(.headline)
                         .fontWeight(Font.Weight.light)
                         .fontWeight(.light)
-                        .foregroundColor(Color.gray)
+                        .foregroundColor(Color.themeColor)
                 }
             }
             .padding(15)
