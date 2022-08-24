@@ -25,7 +25,7 @@ class EmojiMemoryGame {
     
     // 创建卡片内容
     static func createMemoryGame() -> MemoryGame<String> {
-        let emojis: Array<String> = ["👻", "🎃", "🕷️", "🐶"]
+        let emojis = ["👻", "🎃", "🕷️", "🐶"]
         return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { index in
             emojis[index]
         }
