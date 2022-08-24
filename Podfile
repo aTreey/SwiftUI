@@ -14,6 +14,8 @@ target 'SwiftUI_App' do
     pod 'Alamofire', :project_name => 'Networking'
     
     pod 'Alamofire', :project_name => 'Networking'
+    
+    pod 'SwiftLint',  :project_name => 'SwiftLint'
 
   target 'SwiftUI_AppTests' do
     inherit! :search_paths
