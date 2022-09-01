@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // MemoryGame
         let viewModel = EmojiMemoryGame()
-        let contentView = ContentView(viewModel: viewModel)
+        let contentView = EmojiMemoryGameView(viewModel: viewModel)
 
 
         // Use a UIHostingController as window root view controller

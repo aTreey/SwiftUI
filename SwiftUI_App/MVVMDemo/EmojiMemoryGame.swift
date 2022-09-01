@@ -21,7 +21,7 @@ func createCardContent(pairIndex: Int) -> String {
 class EmojiMemoryGame: ObservableObject {
 
     // 保证数据安全，设置 model 外部为只读；只有内部可以修改
-    private(set) var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+    @Published private(set) var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
     
     // 创建卡片内容
     static func createMemoryGame() -> MemoryGame<String> {
