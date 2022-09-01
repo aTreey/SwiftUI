@@ -13,12 +13,6 @@ struct GridLayout {
     private(set) var rowCount: Int = 0
     private(set) var columnCount: Int = 0
     
-//    init(size: CGSize, rowCount: Int, columnCount: Int) {
-//        self.size = size
-//        self.rowCount = rowCount
-//        self.columnCount = columnCount
-//    }
-    
     init(itemCount: Int, nearAspectRatio desiredAspectRatio: Double = 1, in size: CGSize) {
         self.size = size
         guard size.width != 0, size.height != 0, itemCount > 0 else {
@@ -44,9 +38,9 @@ struct GridLayout {
                     bestLayout = (rowCount: rows, columnCount: columns)
                 }
             }
-            rowCount = bestLayout.rowCount
-            columnCount = bestLayout.columnCount
         }
+        rowCount = bestLayout.rowCount
+        columnCount = bestLayout.columnCount
     }
     
     var itemSize: CGSize {
@@ -60,6 +54,6 @@ struct GridLayout {
         if rowCount == 0 || columnCount == 0 {
             return .zero
         }
-        return CGPoint(x: (CGFloat(index % columnCount) + 0.5) * itemSize.width, y: (CGFloat(index / rowCount) + 0.5) * itemSize.height)
+        return CGPoint(x: (CGFloat(index % columnCount) + 0.5) * itemSize.width, y: (CGFloat(index / columnCount) + 0.5) * itemSize.height)
     }
 }
