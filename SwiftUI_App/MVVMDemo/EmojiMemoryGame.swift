@@ -15,10 +15,10 @@ func createCardContent(pairIndex: Int) -> String {
 
 
 
-/// 视图模型
+/// (ViewModel)视图模型
 // 为什么使用 Class 而不是 Struct？
 
-class EmojiMemoryGame {
+class EmojiMemoryGame: ObservableObject {
 
     // 保证数据安全，设置 model 外部为只读；只有内部可以修改
     private(set) var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()

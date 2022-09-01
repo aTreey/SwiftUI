@@ -815,8 +815,8 @@
 			isa = PBXGroup;
 			children = (
 				73AF9CDC28B52D810002D4CF /* ContentView.swift */,
-				73AF9CDA28B52D580002D4CF /* MemoryGame.swift */,
 				73AF9CE228B53A820002D4CF /* EmojiMemoryGame.swift */,
+				73AF9CDA28B52D580002D4CF /* MemoryGame.swift */,
 			);
 			path = MVVMDemo;
 			sourceTree = "<group>";
@@ -1873,6 +1873,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MacLandmarks/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 于鸿鹏. All rights reserved.";
@@ -1902,6 +1903,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MacLandmarks/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 于鸿鹏. All rights reserved.";
@@ -2116,7 +2118,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73FHSFZA77;
+				DEVELOPMENT_TEAM = R3QPL66QDM;
 				IBSC_MODULE = WatchLandmarks_Extension;
 				INFOPLIST_FILE = WatchLandmarks/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftUI-App.watchkitapp";
@@ -2136,7 +2138,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73FHSFZA77;
+				DEVELOPMENT_TEAM = R3QPL66QDM;
 				IBSC_MODULE = WatchLandmarks_Extension;
 				INFOPLIST_FILE = WatchLandmarks/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftUI-App.watchkitapp";

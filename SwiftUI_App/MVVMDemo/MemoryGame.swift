@@ -12,15 +12,34 @@ import Foundation
 
 // 创建数据模型时使用go-to数据结构：1. 考虑模型时做什么？； 2. 数据结构中有那么变量和 函数
 
-
+// (Model)
 struct MemoryGame<CardContent> {
     // 因为是卡片匹配记忆游戏，所以应该有cards
     var cards: Array<Card>
     
-    func choose(card: Card) {
+    mutating func choose(card: Card) {
         print("card choose: \(card)")
+        
+//        card.isFaceUp = !card.isFaceUp
+        
+        let chooseIndex = self.index(of: card)
+        
+        // 修改的是cards 数组中的值
+        cards[chooseIndex].isFaceUp = !cards[chooseIndex].isFaceUp
+        
+        // 修改的是 chooseCard 的值，因为结构体是值类型的，会复制一个值
+//        var chooseCard = cards[chooseIndex]
+//        chooseCard.isFaceUp = !chooseCard.isFaceUp
     }
     
+    func index(of card: Card) -> Int {
+        for index in 0..<cards.count {
+            if cards[index].id == card.id {
+                return index
+            }
+        }
+        return -1
+    }
     
     // 提供初始化方法
     init(numberOfPairsOfCards: Int, cardContentFactory:(Int) -> CardContent) {
