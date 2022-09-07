@@ -14,13 +14,20 @@ import SwiftUI
 struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
     var body: some View {
-        HStack {
-            ForEach(viewModel.cards) { card in
-                CardView(card: card).onTapGesture {
-                    viewModel.choose(card: card)
-                }
+        Grid(items: viewModel.cards) { card in
+            CardView(card: card).onTapGesture {
+                viewModel.choose(card: card)
             }
         }
+        
+        // 使用封装的 Grid
+//        HStack {
+//            ForEach(viewModel.cards) { card in
+//                CardView(card: card).onTapGesture {
+//                    viewModel.choose(card: card)
+//                }
+//            }
+//        }
         .padding()
         .foregroundColor(.orange)
         .font(.largeTitle)
@@ -31,16 +38,25 @@ struct EmojiMemoryGameView: View {
 struct CardView: View {
     var card: MemoryGame<String>.Card
     var body: some View {
+        GeometryReader { geometry in
+            body(for: geometry.size)
+        }
+    }
+    
+    func body(for size: CGSize) -> some View {
         ZStack {
             if card.isFaceUp {
-                RoundedRectangle(cornerRadius: 10).fill(.white)
-                RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3)
+                RoundedRectangle(cornerRadius: cornerRadius).fill(.white)
+                RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: lineWidht)
                 Text(card.content)
             } else {
-                RoundedRectangle(cornerRadius: 10).fill()
+                RoundedRectangle(cornerRadius: cornerRadius).fill()
             }
         }
     }
+    
+    let cornerRadius: CGFloat = 10
+    let lineWidht: CGFloat = 3
 }
 
 
