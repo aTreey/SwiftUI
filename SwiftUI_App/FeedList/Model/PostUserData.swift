@@ -2,8 +2,8 @@
 //  UserData.swift
 //  SwiftUI_App
 //
-//  Created by 于鸿鹏 on 2021/1/14.
-//  Copyright © 2021 于鸿鹏. All rights reserved.
+//  Created by 480814177@qq.com on 2021/1/14.
+//  Copyright © 2021 480814177@qq.com. All rights reserved.
 //
 
 import SwiftUI

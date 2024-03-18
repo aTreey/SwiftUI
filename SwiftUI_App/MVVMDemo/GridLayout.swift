@@ -2,8 +2,8 @@
 //  GridLayout.swift
 //  SwiftUI_App
 //
-//  Created by 于鸿鹏 on 2022/9/7.
-//  Copyright © 2022 于鸿鹏. All rights reserved.
+//  Created by 480814177@qq.com on 2022/9/7.
+//  Copyright © 2022 480814177@qq.com. All rights reserved.
 //
 
 import SwiftUI

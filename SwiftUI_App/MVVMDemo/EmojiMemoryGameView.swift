@@ -2,8 +2,8 @@
 //  ContentView.swift
 //  SwiftUI_App
 //
-//  Created by 于鸿鹏 on 2022/8/23.
-//  Copyright © 2022 于鸿鹏. All rights reserved.
+//  Created by 480814177@qq.com on 2022/8/23.
+//  Copyright © 2022 480814177@qq.com. All rights reserved.
 //
 
 import SwiftUI
@@ -51,6 +51,15 @@ struct CardView: View {
                 Text(card.content)
             } else {
                 RoundedRectangle(cornerRadius: cornerRadius).fill()
+                
+                AsyncImage(url: URL(string: "https://images.ctfassets.net/ooa29xqb8tix/J6KiaOqQyBtSa84hx6fuI/2cd1d475743a2a42c8643b2a69e88547/Advanced_React_Hooks_800x600_cover.png")) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+                } placeholder: {
+                    Color.purple
+                }
             }
         }
     }

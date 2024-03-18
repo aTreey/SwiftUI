@@ -2,8 +2,8 @@
 //  LandmarkRow.swift
 //  MacLandmarks
 //
-//  Created by 于鸿鹏 on 2022/8/19.
-//  Copyright © 2022 于鸿鹏. All rights reserved.
+//  Created by 480814177@qq.com on 2022/8/19.
+//  Copyright © 2022 480814177@qq.com. All rights reserved.
 //
 
 import SwiftUI

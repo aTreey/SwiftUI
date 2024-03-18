@@ -2,8 +2,8 @@
 //  CircleImage.swift
 //  SwiftUI_App
 //
-//  Created by 于鸿鹏 on 2019/7/15.
-//  Copyright © 2019 于鸿鹏. All rights reserved.
+//  Created by 480814177@qq.com on 2019/7/15.
+//  Copyright © 2019 480814177@qq.com. All rights reserved.
 //
 
 import SwiftUI

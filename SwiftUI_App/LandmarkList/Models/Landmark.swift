@@ -2,8 +2,8 @@
 //  Landmark.swift
 //  SwiftUI_App
 //
-//  Created by 于鸿鹏 on 2020/4/29.
-//  Copyright © 2020 于鸿鹏. All rights reserved.
+//  Created by 480814177@qq.com on 2020/4/29.
+//  Copyright © 2020 480814177@qq.com. All rights reserved.
 //
 
 import SwiftUI
